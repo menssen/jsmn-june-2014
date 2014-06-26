@@ -19,3 +19,11 @@
 <script src="angular-ui-router.js"></script>
 <script src="app.js"></script>
 <script src="cordova.js"></script>
+
+<script>
+  document.addEventListener('deviceready', function() {
+    if (parseFloat(window.device.version) >= 7)
+      document.body.style.marginTop = "20px";
+  });
+</script>
+
