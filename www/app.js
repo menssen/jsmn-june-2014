@@ -8,7 +8,6 @@ angular.module('jsmnApp', ['ui.router'])
     url: '/',
     templateUrl: 'main.tpl.html',
     controller: function($rootScope) {
-      $rootScope.test = 'initial';
     },
   });
 
