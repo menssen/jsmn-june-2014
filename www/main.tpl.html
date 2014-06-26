@@ -1,4 +1,3 @@
-<p ng-if="breakpoint === breakpoints.xs">mobile</p>
-<p ng-if="breakpoint === breakpoints.sm">small</p>
-<p ng-if="breakpoint === breakpoints.md">medium</p>
-<p ng-if="breakpoint === breakpoints.lg">large</p>
+<div class='mobile-nav' ng-if="breakpoint === breakpoints.xs">
+  {{ mobileTitle }}
+</div>
