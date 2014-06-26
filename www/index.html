@@ -21,6 +21,62 @@
     font-size: 30px;
     padding-top: 10px;
   }
+
+  .sections {
+    width: 100%;
+    background: #CCC;
+    height: 60px;
+    padding-bottom: 10px;
+  }
+
+  .categories,.songs,.lyrics {
+    width: 32%;
+    float: left;
+    margin-right: 1%;
+  }
+
+  .lyrics {
+    margin-right: 0;
+  }
+
+  .categories {
+    margin-left: 1%;
+  }
+
+  .section, .category, .song {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 3px;
+    background-color: #EEE;
+    padding-top: 3px;
+  }
+
+  .section:hover, .category:hover, .song:hover {
+    background-color: #DDD;
+  }
+
+  .section.active, .category.active, .song.active {
+    background-color: #AAA;
+  }
+
+  .section {
+    height: 40px;
+    padding-top: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .categories, .songs, .lyrics, .section {
+      width: 100%;
+    }
+  }
+
 </style>
 <body ng-app="jsmnApp" ui-view>
 
