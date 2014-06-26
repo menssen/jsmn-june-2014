@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.menssen.jsmn-june-2014" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>JsmnJune2014</name>
+    <description>
+      Example application for Javascript MN
+    </description>
+    <author email="dan@menssen.org" href="http://github.com/menssen/jsmn-june-2014">
+      Dan Menssen
+    </author>
+</widget>

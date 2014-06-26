@@ -1,0 +1,10 @@
+{
+    "lib": {
+        "www": {
+            "id": "com.menssen.jsmn-june-2014",
+            "version": "0.0.1",
+            "uri": "https://github.com/menssen/jsmn-june-2014"
+        }
+    }
+}
+
