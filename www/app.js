@@ -7,7 +7,22 @@ angular.module('jsmnApp', ['ui.router'])
   $stateProvider.state('main', {
     url: '',
     templateUrl: 'main.tpl.html',
-    controller: function($rootScope) {
+    controller: function($rootScope, $state) {
+      $rootScope.parentState = function() {
+        var name = $state.current.name;
+        if (!name.match('.')) {
+          return;
+        }
+
+        name = name.split('.');
+        name.pop();
+        return name.join('.');
+      };
+
+      $rootScope.goToParent = function() {
+        $state.go($rootScope.parentState());
+      };
+
       $rootScope.mobileTitle = 'JSMN App';
     },
   });

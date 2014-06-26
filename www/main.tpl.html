@@ -1,4 +1,5 @@
 <div class='mobile-nav' ng-if="breakpoint === breakpoints.xs">
+  <button type="button" ng-if="parentState()" ng-click="goToParent()">Back</button>
   {{ mobileTitle }}
 </div>
 
