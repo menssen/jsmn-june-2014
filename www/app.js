@@ -20,7 +20,7 @@ angular.module('jsmnApp', ['ui.router'])
       };
 
       $rootScope.goToParent = function() {
-        $state.go($rootScope.parentState());
+        $state.go($rootScope.parentState(), {}, { reload: true });
       };
 
       $rootScope.mobileTitle = 'JSMN App';
@@ -31,7 +31,7 @@ angular.module('jsmnApp', ['ui.router'])
     url: '/:section',
     templateUrl: 'section.tpl.html',
     controller: function($rootScope, $stateParams, songData) {
-      $rootScope.mobileTitle = 'JSMN App';
+      $rootScope.mobileTitle = $stateParams.section === 'artists' ? 'Artists' : 'Albums';
       $rootScope.categories = songData[$stateParams.section];
     },
   });
@@ -40,12 +40,13 @@ angular.module('jsmnApp', ['ui.router'])
     url: '/:category',
     templateUrl: 'category.tpl.html',
     controller: function($rootScope, $stateParams, songData) {
-      $rootScope.mobileTitle = 'JSMN App';
       var category = songData[$stateParams.section]
         .filter(function(category) {
           return category.key === $stateParams.category;
         })[0]
       ;
+
+      $rootScope.mobileTitle = category.name;
 
       $rootScope.songs = category.songs;
     },
@@ -55,7 +56,6 @@ angular.module('jsmnApp', ['ui.router'])
     url: '/:song',
     templateUrl: 'song.tpl.html',
     controller: function($rootScope, $stateParams, songData, $sce) {
-      $rootScope.mobileTitle = 'JSMN App';
       var song = songData[$stateParams.section]
         .filter(function(category) {
           return category.key === $stateParams.category;
@@ -64,6 +64,8 @@ angular.module('jsmnApp', ['ui.router'])
           return song.key === $stateParams.song;
         })[0]
       ;
+
+      $rootScope.mobileTitle = song.name;
 
       $rootScope.lyrics = $sce.trustAsHtml(song.lyrics);
     },
