@@ -3,55 +3,12 @@
 </div>
 
 <div class="sections">
-  <div class="section active">Artist</div>
-  <div class="section">Album</div>
+  <div ui-sref-active="active" ui-sref="main.section({ section: 'artists' })" class="section">
+    Artist
+  </div>
+  <div ui-sref-active="active" ui-sref="main.section({ section: 'albums' })" class="section">
+    Album
+  </div>
 </div>
 
-<div class="categories">
-  <div class="category">Valerie June</div>
-  <div class="category">Kurt Vile and The Violators</div>
-  <div class="category">Dessa</div>
-  <div class="category active">Guided By Voices</div>
-  <div class="category">Spoon</div>
-</div>
-
-<div class="songs">
-  <div class="song">Teenage FBI</div>
-  <div class="song active">I am a Scientist</div>
-  <div class="song">Game of Pricks</div>
-</div>
-
-<div class="lyrics">
-  <br>I am a scientist - I seek to understand me
-  <br>All of my impurities and evils yet unknown
-  <br>I am a journalist - I write to you to show you
-  <br>I am an incurable and nothing else behaves like me
-  <br>
-  <br>And I know what's right
-  <br>But I'm losing sight of the clues
-  <br>For which I search and choose to abuse
-  <br>To just unlock my mind
-  <br>Yeah just unlock my mind
-  <br>
-  <br>I am a pharmacist - prescriptions I will fill you
-  <br>Potions pills and medicines to ease your painful lives
-  <br>I am a lost soul, I shoot myself with rock &amp; roll
-  <br>The hole I dig is bottomless but nothing else can set me free
-  <br>
-  <br>And I know what's right
-  <br>But I'm losing sight of the clues
-  <br>For which I search and choose to abuse
-  <br>To just unlock my mind
-  <br>Yeah just unlock my mind
-  <br>
-  <br>I am a scientist - I seek to understand me
-  <br>I am an incurable and nothing else behaves like me
-  <br>
-  <br>Everything is right
-  <br>Everything works out right
-  <br>Everything fades from sight
-  <br>Because that's alright with me
-</div>
-
-
-
+<ui-view></ui-view>

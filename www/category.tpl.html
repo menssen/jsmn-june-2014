@@ -1,7 +1,12 @@
 <div class="songs">
-  <div class="song">Teenage FBI</div>
-  <div class="song active">I am a Scientist</div>
-  <div class="song">Game of Pricks</div>
+  <div
+    class="song"
+    ng-repeat="song in songs"
+    ui-sref="main.section.category.song({ song: song.key })"
+    ui-sref-active="active"
+  >
+    {{ song.name }}
+  </div>
 </div>
 
 <ui-view></ui-view>

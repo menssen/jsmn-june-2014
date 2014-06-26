@@ -1,9 +1,12 @@
 <div class="categories">
-  <div class="category">Valerie June</div>
-  <div class="category">Kurt Vile and The Violators</div>
-  <div class="category">Dessa</div>
-  <div class="category active">Guided By Voices</div>
-  <div class="category">Spoon</div>
+  <div
+    class="category"
+    ng-repeat="category in categories"
+    ui-sref="main.section.category({category: category.key})"
+    ui-sref-active="active"
+  >
+    {{ category.name }}
+  </div>
 </div>
 
 <ui-view></ui-view>
